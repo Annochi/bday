@@ -8,6 +8,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to right, pink, rgba(88, 147, 248, 0.973));
         }
         .map-container {
             width: 100%;
@@ -17,17 +18,35 @@
             margin-top: 20px;
             font-size: 20px;
         }
+        button{
+            margin-top:  20px;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 20%;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <h1>Я может и забывчивая, но</h1>
-    <p>Следуй по меткам на карте, чтобы раскрыть тайну!</p>
+    <h1>Я может и забывчивая, но...</h1>
+    
     <div class="map-container">
         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1bpAUkHRNwmZ5sUNCIw4sw7Dp217X7es&ehbc=2E312F" width="100%" height="100%" frameborder="0"></iframe>
     </div>
     <div class="hint" id="hint">Наведите на метку, чтобы получить подсказку!</div>
+    <button onclick="showConfetti()">
+        Как расшифровать?
+    </button>
     <script>
-        
+      function showConfetti() {
+            // Отображение конфетти с Canvas Confetti
+            confetti({
+                particleCount: 150, // Количество частиц
+                spread: 70,         // Угол распространения
+                origin: { y: 0.6 }  // Начальная позиция (чуть ниже центра)
+            });
+            alert('Шифр называется A1Z26. Декодер мне было лень интегрировать, поэтому если хочешь прочитать - используй онлайн разшифровщики, либо же просто по алфавиту читай ');
+        }
     </script>
 </body>
 </html>
