@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script> 
     <title></title>
     <style>
         body {
@@ -39,11 +40,11 @@
     </button>
     <script>
       function showConfetti() {
-            // Отображение конфетти с Canvas Confetti
+            
             confetti({
-                particleCount: 150, // Количество частиц
-                spread: 70,         // Угол распространения
-                origin: { y: 0.6 }  // Начальная позиция (чуть ниже центра)
+                particleCount: 150, 
+                spread: 70,         
+                origin: { y: 0.6 }  
             });
             alert('Шифр называется A1Z26. Декодер мне было лень интегрировать, поэтому если хочешь прочитать - используй онлайн разшифровщики, либо же просто по алфавиту читай ');
         }
